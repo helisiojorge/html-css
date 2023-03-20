@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        thead, tfoot {
+            background-color: rgb(60, 60, 60);
+            color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: rgb(60, 60, 60);
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: lightgray;
+        }
+
+        .num{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        Anatomia para tabelas grandes
+        table
+            thead
+                tr, td, th
+            tboy
+                tr, td, th
+            tfoot
+                tr, td, th
+
+        (titulo / cabeçalho) th
+        (Dado) td
+        (Titulo da tabela)caption
+
+        tr:nth-child(odd) 
+        parametros
+        odd ímpar
+        even par
+
+
+
+    -->
+    <table>
+        <caption>População das provícias de Angola</caption>
+        <thead>
+            <tr>
+                <th scope="col" >Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Luanda</td>
+                <td class="num">9886700</td>
+            </tr>
+            <tr>
+                <td>Viana</td>
+                <td class="num">9000000</td>
+            </tr>
+            <tr>
+                <td>Belas</td>
+                <td class="num">90000000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de habitantes</th>
+                <strong>
+                    <td class="num">9886700</td>
+                </strong>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
